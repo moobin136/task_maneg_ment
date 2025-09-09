@@ -10,6 +10,12 @@ class ForggotPasswordScreent extends StatefulWidget {
 class _ForggotPasswordScreentState extends State<ForggotPasswordScreent> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Forggot password Page')));
+    return Scaffold(appBar: AppBar(title: Text('Forggot password Page'),),
+    body: Column(
+      children: [
+        Text('data')
+      ],
+    ),
+    );
   }
 }

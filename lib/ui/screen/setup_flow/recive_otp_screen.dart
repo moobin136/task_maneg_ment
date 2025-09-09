@@ -1,19 +1,18 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:task_maneg_ment/ui/screen/registion_screen.dart';
-import 'package:task_maneg_ment/ui/utils/app_color.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:task_maneg_ment/ui/screen/setup_flow/login_screen.dart';
+import 'package:task_maneg_ment/ui/screen/setup_flow/reset_password.dart';
 import 'package:task_maneg_ment/ui/widget/screent_background.dart';
 
-import 'forggot_password_screent.dart';
-
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class OtpFild extends StatefulWidget {
+  const OtpFild({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<OtpFild> createState() => _OtpFildState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _OtpFildState extends State<OtpFild> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -26,17 +25,41 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               const SizedBox(height: 200),
               Text(
-                'Get Started With',
+                'PIN Verifiation',
                 style: textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
               ),
+              const SizedBox(height: 10),
+              Text(
+                'A 6 Digit verification pin will send your email addresh',
+                style: textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
               const SizedBox(height: 16),
-              buildFrom(),
+              PinCodeTextField(
+                length: 6,
+                obscureText: false,
+                pinTheme: PinTheme(
+                  shape: PinCodeFieldShape.box,
+                  borderRadius: BorderRadius.circular(10),
+                  fieldHeight: 50,
+                  fieldWidth: 40,
+                  activeFillColor: Colors.white,
+                  inactiveFillColor: Colors.white,
+                  selectedColor: Colors.green,
+                  inactiveColor: Colors.grey,
+                ),
+
+                appContext: context,
+              ),
               const SizedBox(height: 16),
               ElevatedButton(
-                onPressed: oneTabLoginButton,
-                child: Icon(Icons.arrow_forward_ios, size: 26),
+                onPressed: oneTabVerifiButton,
+                child: Text('Verify'),
               ),
               const SizedBox(height: 30),
               biuldForgotAndSinupButton(),
@@ -47,26 +70,20 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  /// ===================> loginButton
-  void oneTabLoginButton() {
+  /// ===================> onTabVerifierButton
+  void oneTabVerifiButton() {
     // TODO implement
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPasswrodScreen(),));
   }
 
   ///====================>>>>>>>>> forgot password
-  void onTabForggotPassword() {
-    // TODO implement
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ForggotPasswordScreent()),
-    );
-  }
 
   /// ========================>>>>>>> sin Button
   void onTabSingUpButton() {
     // TODO implement
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => RegistionScreen()),
+      MaterialPageRoute(builder: (context) => LoginScreen()),
     );
   }
 
@@ -74,21 +91,17 @@ class _LoginScreenState extends State<LoginScreen> {
     return Center(
       child: Column(
         children: [
-          TextButton(
-            onPressed: onTabForggotPassword,
-            child: Text('Forgot Password'),
-          ),
           RichText(
             text: TextSpan(
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
-              text: "Don't have and account?  ",
+              text: "Have account ",
               children: [
                 TextSpan(
                   recognizer: TapGestureRecognizer()..onTap = onTabSingUpButton,
-                  text: 'Sing Up',
+                  text: 'Sing in',
                   style: TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.bold,
@@ -99,26 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  Widget buildFrom() {
-    return Column(
-      children: [
-        TextFormField(
-          decoration: InputDecoration(
-            hintText: 'Email',
-            helperStyle: TextStyle(color: Colors.grey),
-          ),
-        ),
-        const SizedBox(height: 16),
-        TextFormField(
-          decoration: InputDecoration(
-            hintText: 'Password',
-            helperStyle: TextStyle(color: Colors.grey),
-          ),
-        ),
-      ],
     );
   }
 }

@@ -43,47 +43,53 @@ class _RegistionScreenState extends State<RegistionScreen> {
       ),
     );
   }
-}
-void oneTabLoginButton() {
-  // TODO implement
+  void oneTabLoginButton() {
+    // TODO implement
+  }
+  Widget buildFrom() {
+    return Column(
+      children: [
+        TextFormField(
+          decoration: InputDecoration(
+            hintText: 'First Name',
+            helperStyle: TextStyle(color: Colors.grey),
+          ),
+        ),
+        const SizedBox(height: 16),
+        TextFormField(
+          decoration: InputDecoration(
+            hintText: 'Last Name',
+            helperStyle: TextStyle(color: Colors.grey),
+          ),
+
+        ),
+        const SizedBox(height: 16),
+        TextFormField(
+          decoration: InputDecoration(
+            hintText: 'Email',
+            helperStyle: TextStyle(color: Colors.grey),
+          ),
+        ),
+        const SizedBox(height: 16),
+        TextFormField(
+          decoration: InputDecoration(
+            hintText: 'Password',
+            helperStyle: TextStyle(color: Colors.grey),
+          ),
+        ),const SizedBox(height: 16),
+        TextFormField(
+          decoration: InputDecoration(
+            hintText: 'Password',
+            helperStyle: TextStyle(color: Colors.grey),
+          ),
+        ),
+      ],
+    );
+  }
+
 }
 
 
-Widget buildFrom() {
-  return Column(
-    children: [
-      TextFormField(
-        decoration: InputDecoration(
-          hintText: 'Email',
-          helperStyle: TextStyle(color: Colors.grey),
-        ),
-      ),
-      const SizedBox(height: 16),
-      TextFormField(
-        decoration: InputDecoration(
-          hintText: 'Password',
-          helperStyle: TextStyle(color: Colors.grey),
-        ),
-      ),TextFormField(
-        decoration: InputDecoration(
-          hintText: 'Email',
-          helperStyle: TextStyle(color: Colors.grey),
-        ),
-      ),
-      const SizedBox(height: 16),
-      TextFormField(
-        decoration: InputDecoration(
-          hintText: 'Password',
-          helperStyle: TextStyle(color: Colors.grey),
-        ),
-      ),const SizedBox(height: 16),
-      TextFormField(
-        decoration: InputDecoration(
-          hintText: 'Password',
-          helperStyle: TextStyle(color: Colors.grey),
-        ),
-      ),
-    ],
-  );
-}
+
+
 

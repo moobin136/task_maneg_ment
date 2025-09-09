@@ -8,6 +8,7 @@ class TaskManegMent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: TextTheme(),
         inputDecorationTheme: inputDecorationTheme(),
@@ -17,16 +18,15 @@ class TaskManegMent extends StatelessWidget {
       home: SplashScreent(),
     );
   }
-  ElevatedButtonThemeData elevatedButtonThemeData(){
+
+  ElevatedButtonThemeData elevatedButtonThemeData() {
     return ElevatedButtonThemeData(
-      style:  ElevatedButton.styleFrom(
+      style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.themColor,
         foregroundColor: Colors.white,
         padding: EdgeInsets.symmetric(vertical: 10),
         fixedSize: Size.fromWidth(double.maxFinite),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       ),
     );
   }
