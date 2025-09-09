@@ -11,6 +11,14 @@ class _NavScreenState extends State<NavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // bottomSheet: ,
+      bottomNavigationBar:BottomNavigationBar(items:[
+        BottomNavigationBarItem(icon: Icon(Icons.add)),
+        BottomNavigationBarItem(icon: Icon(Icons.add)),
+        BottomNavigationBarItem(icon: Icon(Icons.add)),
+
+
+      ] ) ,
 
     );
   }
