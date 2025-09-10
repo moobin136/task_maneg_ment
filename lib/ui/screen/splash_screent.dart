@@ -34,7 +34,7 @@ class _SplashScreentState extends State<SplashScreent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screent_bacground(
+      body: ScreentBacground(
         child: Center(child: SvgPicture.asset(AssetsPath.logo, width: 120)),
       ),
     );

@@ -2,11 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:task_maneg_ment/ui/screen/setup_flow/login_screen.dart';
 import 'package:task_maneg_ment/ui/screen/setup_flow/recive_otp_screen.dart';
-import 'package:task_maneg_ment/ui/screen/setup_flow/registion_screen.dart';
-import 'package:task_maneg_ment/ui/utils/app_color.dart';
-import 'package:task_maneg_ment/ui/widget/screent_background.dart';
 
-import 'forggot_password_screent.dart';
+import 'package:task_maneg_ment/ui/widget/screent_background.dart';
 
 class EmailSendCode extends StatefulWidget {
   const EmailSendCode({super.key});
@@ -20,7 +17,7 @@ class _EmailSendCodeState extends State<EmailSendCode> {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      body: screent_bacground(
+      body: ScreentBacground(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(

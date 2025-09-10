@@ -17,7 +17,7 @@ class _OtpFildState extends State<OtpFild> {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      body: screent_bacground(
+      body: ScreentBacground(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
@@ -73,7 +73,10 @@ class _OtpFildState extends State<OtpFild> {
   /// ===================> onTabVerifierButton
   void oneTabVerifiButton() {
     // TODO implement
-    Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPasswrodScreen(),));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ResetPasswrodScreen()),
+    );
   }
 
   ///====================>>>>>>>>> forgot password

@@ -13,7 +13,7 @@ class _RegistionScreenState extends State<RegistionScreen> {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      body: screent_bacground(
+      body: ScreentBacground(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: SingleChildScrollView(
@@ -35,7 +35,6 @@ class _RegistionScreenState extends State<RegistionScreen> {
                   child: Icon(Icons.arrow_forward_ios, size: 26),
                 ),
                 const SizedBox(height: 30),
-            
               ],
             ),
           ),
@@ -43,6 +42,7 @@ class _RegistionScreenState extends State<RegistionScreen> {
       ),
     );
   }
+
   void oneTabLoginButton() {
     // TODO implement
   }
@@ -61,7 +61,6 @@ class _RegistionScreenState extends State<RegistionScreen> {
             hintText: 'Last Name',
             helperStyle: TextStyle(color: Colors.grey),
           ),
-
         ),
         const SizedBox(height: 16),
         TextFormField(
@@ -76,7 +75,8 @@ class _RegistionScreenState extends State<RegistionScreen> {
             hintText: 'Password',
             helperStyle: TextStyle(color: Colors.grey),
           ),
-        ),const SizedBox(height: 16),
+        ),
+        const SizedBox(height: 16),
         TextFormField(
           decoration: InputDecoration(
             hintText: 'Password',
@@ -86,10 +86,4 @@ class _RegistionScreenState extends State<RegistionScreen> {
       ],
     );
   }
-
 }
-
-
-
-
-

@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:task_maneg_ment/ui/screen/setup_flow/registion_screen.dart';
-import 'package:task_maneg_ment/ui/utils/app_color.dart';
+
 import 'package:task_maneg_ment/ui/widget/screent_background.dart';
 
 import '../nav/nav_screen.dart';
-import 'forggot_password_screent.dart';
+
 import 'forgot_password_email_send.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      body: screent_bacground(
+      body: ScreentBacground(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(

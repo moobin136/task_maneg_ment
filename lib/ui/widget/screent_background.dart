@@ -3,8 +3,9 @@ import 'package:flutter_svg/svg.dart';
 
 import '../utils/assets_path.dart';
 
-class screent_bacground extends StatelessWidget {
-  screent_bacground({super.key, required this.child});
+// ignore: must_be_immutable
+class ScreentBacground extends StatelessWidget {
+  ScreentBacground({super.key, required this.child});
 
   Widget child;
 
