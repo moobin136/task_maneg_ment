@@ -41,6 +41,7 @@ class _OtpFildState extends State<OtpFild> {
               ),
               const SizedBox(height: 16),
               PinCodeTextField(
+                backgroundColor: Colors.transparent,
                 length: 6,
                 obscureText: false,
                 pinTheme: PinTheme(
@@ -52,6 +53,7 @@ class _OtpFildState extends State<OtpFild> {
                   inactiveFillColor: Colors.white,
                   selectedColor: Colors.green,
                   inactiveColor: Colors.grey,
+                  
                 ),
 
                 appContext: context,

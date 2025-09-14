@@ -11,13 +11,13 @@ class ScreentBacground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size _screentSiz = MediaQuery.sizeOf(context);
+    Size screentSiz = MediaQuery.sizeOf(context);
     return Stack(
       children: [
         SvgPicture.asset(
           AssetsPath.background,
-          height: _screentSiz.height,
-          width: _screentSiz.width,
+          height: screentSiz.height,
+          width: screentSiz.width,
           fit: BoxFit.cover,
         ),
         child,

@@ -112,6 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Column(
       children: [
         TextFormField(
+          
           decoration: InputDecoration(
             hintText: 'Email',
             helperStyle: TextStyle(color: Colors.grey),

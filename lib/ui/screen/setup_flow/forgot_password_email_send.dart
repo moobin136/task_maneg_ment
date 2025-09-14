@@ -25,7 +25,7 @@ class _EmailSendCodeState extends State<EmailSendCode> {
             children: [
               const SizedBox(height: 200),
               Text(
-                'Your Email Address',
+                'Your Email Address  ',
                 style: textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
