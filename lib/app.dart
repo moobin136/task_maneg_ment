@@ -35,6 +35,8 @@ class TaskManegMent extends StatelessWidget {
     return InputDecorationTheme(
       filled: true,
       fillColor: Colors.white,
+
+      hintStyle: TextStyle(color: Colors.black45,fontSize: 16,fontWeight: FontWeight.w500),
       border: _outlineInputBorder(),
       errorBorder: _outlineInputBorder(),
       focusedBorder: _outlineInputBorder(),

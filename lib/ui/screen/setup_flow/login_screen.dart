@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
   /// ===================> loginButton
   void oneTabLoginButton() {
     // TODO implement
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => NavScreen()),
     );

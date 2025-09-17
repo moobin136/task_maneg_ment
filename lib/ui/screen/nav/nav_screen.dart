@@ -3,7 +3,9 @@ import 'package:task_maneg_ment/screen_flow/canceled_screen.dart';
 import 'package:task_maneg_ment/screen_flow/completed_screen.dart';
 import 'package:task_maneg_ment/screen_flow/newTask_screen.dart';
 import 'package:task_maneg_ment/screen_flow/progress_screen.dart';
-import 'package:task_maneg_ment/ui/utils/app_color.dart';
+import 'package:task_maneg_ment/ui/screen/setup_flow/login_screen.dart';
+
+import '../../widget/custom_appbar.dart';
 
 class NavScreen extends StatefulWidget {
   const NavScreen({super.key});
@@ -31,26 +33,12 @@ class _NavScreenState extends State<NavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false, // ← back button না থাকবে
-        titleSpacing: 20, // ← leading থেকে gap দেবে
-        backgroundColor: AppColors.themColor,
-        title: Row(
-          children: [
-            CircleAvatar(maxRadius: 25, backgroundColor: Colors.black),
-            const SizedBox(width: 8),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text('Md Mozahedu Islam'),
-                SizedBox(height: 2),
-                Text('Moobin'),
-              ],
-            ),
-          ],
+      appBar: TMAppBar(
+        iconButton: IconButton(
+          onPressed: _logoutButton,
+          icon: Icon(Icons.logout_rounded),
         ),
       ),
-
       body: screenList[_seltdIndex],
       // bottomSheet: ,
       bottomNavigationBar: NavigationBar(
@@ -72,6 +60,14 @@ class _NavScreenState extends State<NavScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  void _logoutButton() {
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+      (route) => false,
     );
   }
 }
