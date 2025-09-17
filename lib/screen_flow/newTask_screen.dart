@@ -10,9 +10,6 @@ class NewtaskScreen extends StatefulWidget {
 class _NewtaskScreenState extends State<NewtaskScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Column()),
-      body: Center(child: Text('NewTask Screen')),
-    );
+    return Scaffold(body: Center(child: Text('NewTask Screen')));
   }
 }
